@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2FCF040-9BF4-4782-A804-8E179BCC2C93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Communication.cs" />
+    <Compile Include="FrmAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAuth.Designer.cs">
+      <DependentUpon>FrmAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditGame.Designer.cs">
+      <DependentUpon>FrmEditGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditGames.Designer.cs">
+      <DependentUpon>FrmEditGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateGames.Designer.cs">
+      <DependentUpon>FrmCreateGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateGame.Designer.cs">
+      <DependentUpon>FrmCreateGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGame.Designer.cs">
+      <DependentUpon>FrmGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditPlayer.Designer.cs">
+      <DependentUpon>FrmEditPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreatePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreatePlayer.Designer.cs">
+      <DependentUpon>FrmCreatePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditTournament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditTournament.Designer.cs">
+      <DependentUpon>FrmEditTournament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateTournament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateTournament.Designer.cs">
+      <DependentUpon>FrmCreateTournament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIControllers\AuthGUIController.cs" />
+    <Compile Include="GUIControllers\EditGameGUIController.cs" />
+    <Compile Include="GUIControllers\EditGamesGUIController.cs" />
+    <Compile Include="GUIControllers\CreateGamesGUIController.cs" />
+    <Compile Include="GUIControllers\CreateGameGUIController.cs" />
+    <Compile Include="GUIControllers\EditPlayerGUIController.cs" />
+    <Compile Include="GUIControllers\CreatePlayerGUIController.cs" />
+    <Compile Include="GUIControllers\EditTournamentGUIController.cs" />
+    <Compile Include="GUIControllers\GameGUIController.cs" />
+    <Compile Include="GUIControllers\MainGUIController.cs" />
+    <Compile Include="GUIControllers\CreateTournamentGUIController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="UserControls\ChessBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ChessBoard.Designer.cs">
+      <DependentUpon>ChessBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GameCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GameCard.Designer.cs">
+      <DependentUpon>GameCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GameModal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GameModal.Designer.cs">
+      <DependentUpon>GameModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PlayerModal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PlayerModal.Designer.cs">
+      <DependentUpon>PlayerModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchBar.Designer.cs">
+      <DependentUpon>SearchBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GamesModal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GamesModal.Designer.cs">
+      <DependentUpon>GamesModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TournamentModal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TournamentModal.Designer.cs">
+      <DependentUpon>TournamentModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoginPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LoginPanel.Designer.cs">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Logo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Logo.Designer.cs">
+      <DependentUpon>Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainNavbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainNavbar.Designer.cs">
+      <DependentUpon>MainNavbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PlayerCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PlayerCard.Designer.cs">
+      <DependentUpon>PlayerCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TournamentCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TournamentCard.Designer.cs">
+      <DependentUpon>TournamentCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WindowControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\WindowControls.Designer.cs">
+      <DependentUpon>WindowControls.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmAuth.resx">
+      <DependentUpon>FrmAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditGame.resx">
+      <DependentUpon>FrmEditGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditGames.resx">
+      <DependentUpon>FrmEditGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateGames.resx">
+      <DependentUpon>FrmCreateGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateGame.resx">
+      <DependentUpon>FrmCreateGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGame.resx">
+      <DependentUpon>FrmGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditPlayer.resx">
+      <DependentUpon>FrmEditPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreatePlayer.resx">
+      <DependentUpon>FrmCreatePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditTournament.resx">
+      <DependentUpon>FrmEditTournament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateTournament.resx">
+      <DependentUpon>FrmCreateTournament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\ChessBoard.resx">
+      <DependentUpon>ChessBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GameCard.resx">
+      <DependentUpon>GameCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GameModal.resx">
+      <DependentUpon>GameModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PlayerModal.resx">
+      <DependentUpon>PlayerModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SearchBar.resx">
+      <DependentUpon>SearchBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GamesModal.resx">
+      <DependentUpon>GamesModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TournamentModal.resx">
+      <DependentUpon>TournamentModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Logo.resx">
+      <DependentUpon>Logo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainNavbar.resx">
+      <DependentUpon>MainNavbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PlayerCard.resx">
+      <DependentUpon>PlayerCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TournamentCard.resx">
+      <DependentUpon>TournamentCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\WindowControls.resx">
+      <DependentUpon>WindowControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\background.png" />
+    <None Include="Resources\pieces\white_queen2.png" />
+    <None Include="Resources\pieces\white_pawn2.png" />
+    <None Include="Resources\pieces\white_knight2.png" />
+    <None Include="Resources\pieces\white_king2.png" />
+    <None Include="Resources\pieces\white_bishop2.png" />
+    <None Include="Resources\pieces\black_rook2.png" />
+    <None Include="Resources\pieces\black_queen2.png" />
+    <None Include="Resources\pieces\black_pawn2.png" />
+    <None Include="Resources\pieces\black_knigh2.png" />
+    <None Include="Resources\pieces\black_king2.png" />
+    <None Include="Resources\pieces\black_bishop2.png" />
+    <None Include="Resources\pieces\white_rook2.png" />
+    <None Include="Resources\white_rook2.png" />
+    <None Include="Resources\white_queen2.png" />
+    <None Include="Resources\white_pawn2.png" />
+    <None Include="Resources\white_knight2.png" />
+    <None Include="Resources\white_king2.png" />
+    <None Include="Resources\white_bishop2.png" />
+    <None Include="Resources\white_queen.png" />
+    <None Include="Resources\white_pawn.png" />
+    <None Include="Resources\white_knight.png" />
+    <None Include="Resources\white_king.png" />
+    <None Include="Resources\white_bishop.png" />
+    <None Include="Resources\white_rook.png" />
+    <None Include="Resources\black_rook.png" />
+    <None Include="Resources\black_bishop.png" />
+    <None Include="Resources\black_king.png" />
+    <None Include="Resources\black_knight.png" />
+    <None Include="Resources\black_pawn.png" />
+    <None Include="Resources\black_queen.png" />
+    <None Include="Resources\black_bishop2.png" />
+    <None Include="Resources\black_king2.png" />
+    <None Include="Resources\black_knigh2.png" />
+    <None Include="Resources\black_queen2.png" />
+    <None Include="Resources\black_rook2.png" />
+    <None Include="Resources\black_pawn2.png" />
+    <Content Include="Resources\chess.png" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\maximize.png" />
+    <Content Include="Resources\minimize.png" />
+    <None Include="Resources\PawnWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7484FC16-4C37-47F8-AD2A-556D0EC35712}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
