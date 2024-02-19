@@ -9,8 +9,6 @@ namespace Repository
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        User Login(User user);
-        User Register(User user);
         bool Add(TEntity entity);
         bool Update(TEntity entity);
         bool Delete(TEntity key);

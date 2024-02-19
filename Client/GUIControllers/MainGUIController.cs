@@ -261,6 +261,7 @@ namespace Client.GUIControllers
                 card.BtnDelete.Click += (object sender, EventArgs e) =>
                 {
                     Communication.Instance.DeleteTournament(t);
+                    MessageBox.Show("Uspešno izbrisan turnir");
                     ShowAllTournaments();
                 };
 

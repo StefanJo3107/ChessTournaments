@@ -124,6 +124,7 @@ namespace Client.GUIControllers
             game.Black = (Player)frmEditGame.GameModal.CbCrni.SelectedItem;
             game.Round = (int)frmEditGame.GameModal.NumRunda.Value;
             game.Date = frmEditGame.GameModal.DtDatum.Value.ToString("yyyy-MM-dd");
+            frmEditGame.Close();
 
             //Session.games.Add(game);
         }

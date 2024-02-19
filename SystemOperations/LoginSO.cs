@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Common.Domain;
+using SystemOperations;
 
 namespace SystemOperation
 {
@@ -19,7 +20,24 @@ namespace SystemOperation
 
         protected override void ExecuteConcreteOperation()
         {
-            Result = repository.Login(user);
+            var password = user.Password;
+            var users = repository.GetAll(user);
+            if (users == null || users.Count != 1) {
+                Result = null;
+            }
+            else
+            {
+                User found = (User)users[0];
+                user.Salt = found.Salt;
+                string inputPassword = HelperSO.ComputeHash(Encoding.UTF8.GetBytes(password), Encoding.UTF8.GetBytes(user.Salt));
+                if (inputPassword == found.Password)
+                {
+                    Result = found;
+                    return;
+                }
+            }
+
+            Result = null;
         }
     }
 }

@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="DBConnection\DBConnection.cs" />
     <Compile Include="DBConnection\DBConnectionFactory.cs" />
-    <Compile Include="Implementation\GenericDBRepository.cs" />
+    <Compile Include="Implementation\DBBroker.cs" />
     <Compile Include="Interfaces\IDBRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

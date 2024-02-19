@@ -14,7 +14,7 @@ namespace SystemOperation
 
         public SystemOperationBase()
         {
-            repository = new GenericDBRepository();
+            repository = new DBBroker();
         }
 
         public void ExecuteTemplate()

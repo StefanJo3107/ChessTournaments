@@ -45,6 +45,7 @@
     <Compile Include="CreateGamesSO.cs" />
     <Compile Include="GetGamesSO.cs" />
     <Compile Include="DeleteTournamentSO.cs" />
+    <Compile Include="HelperSO.cs" />
     <Compile Include="SearchPlayersSO.cs" />
     <Compile Include="SearchTournamentsSO.cs" />
     <Compile Include="GetTournamentTypesSO.cs" />
